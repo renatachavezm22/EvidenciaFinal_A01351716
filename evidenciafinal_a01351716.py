@@ -14,13 +14,3 @@ mapa=pd.DataFrame()
 mapa=mapa.dropna()
 st.map(mapa.astype(int))
 
-# Gráfico de barras
-plt.figure(figsize=(8, 6))
-sns.countplot(data=df, x='category')
-plt.xticks(rotation=45)
-st.pyplot()
-
-# Gráfico de dispersión
-st.subheader('Incident Locations')
-st.map(df[['latitude', 'longitude']])
-
