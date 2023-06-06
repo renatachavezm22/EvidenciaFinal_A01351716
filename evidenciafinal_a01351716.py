@@ -1,7 +1,10 @@
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 st.title ('Police Incident Reports from 2018 and 2020 in San Francisco')
+st.header('Police Incident Reports from 2018 and 2020 in San Francisco')
 
 df = pd.read_csv("https://drive.google.com/file/d/1ioUp8979nNLh9h-CYVyJcRgAhxBhCLIm/view")
 
@@ -10,3 +13,14 @@ st.markdown('The data shown below belongs to incident reports in the city of San
 mapa=pd.DataFrame()
 mapa=mapa.dropna()
 st.map(mapa.astype(int))
+
+# Gráfico de barras
+plt.figure(figsize=(8, 6))
+sns.countplot(data=df, x='category')
+plt.xticks(rotation=45)
+st.pyplot()
+
+# Gráfico de dispersión
+st.subheader('Incident Locations')
+st.map(df[['latitude', 'longitude']])
+
