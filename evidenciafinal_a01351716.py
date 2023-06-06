@@ -12,11 +12,6 @@ mapa=pd.DataFrame()
 mapa=mapa.dropna()
 st.map(mapa.astype(int))
 
-categories = st.multiselect('Select Categories', df['category'].unique())
-filtered_df = df[df['category'].isin(categories)]
-
-st.subheader('Filtered Incident Reports')
-st.dataframe(filtered_df)
-
-st.subheader('Summary Statistics')
-st.write(filtered_df.describe())
+st.write(f'Total Records: {len(df)}')
+st.write(f'Earliest Date: {df["date"].min()}')
+st.write(f'Latest Date: {df["date"].max()}')
