@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 st.title ('Police Incident Reports from 2018 and 2020 in San Francisco')
 st.header('Police Incident Reports from 2018 and 2020 in San Francisco')
@@ -13,4 +11,3 @@ st.markdown('The data shown below belongs to incident reports in the city of San
 mapa=pd.DataFrame()
 mapa=mapa.dropna()
 st.map(mapa.astype(int))
-
