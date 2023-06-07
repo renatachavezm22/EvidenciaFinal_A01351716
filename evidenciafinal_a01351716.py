@@ -20,14 +20,14 @@ st.map(mapa)
 '''
 
 mapa=pd.DataFrame()
-mapa=['Date']=df['Incident Date']
-mapa=['Day']=df['Incident Day of Week]
-mapa=['Police District']=df['Police District']
-mapa=['Neighborhood']=df['Analysis Neighborhood']
-mapa=['Incident Category']=df['Incident Category']
-mapa=['Resolution']=df['Resolution']
-mapa=['lat']=df['Latitude']
-mapa=['lon']=df['Longitude']
+mapa['Date']=df['Incident Date']
+mapa['Day']=df['Incident Day of Week]
+mapa['Police District']=df['Police District']
+mapa['Neighborhood']=df['Analysis Neighborhood']
+mapa['Incident Category']=df['Incident Category']
+mapa['Resolution']=df['Resolution']
+mapa['lat']=df['Latitude']
+mapa['lon']=df['Longitude']
 mapa=mapa.dropna()
    
 
