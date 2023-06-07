@@ -1,10 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly as px
-import plotly.figure_factory as ff
-from bokeh.plotting import figure
-import matplotlib.pyplot as plt
 
 st.header(':blue[Police Incident Reports from 2018 to 2020 in San Francisco] :police_car: :us:')
 df=pd.read_csv("https://drive.google.com/file/d/11oLcKiW8SgCOp3tGiQCYuRG7pLL_J-Zf/view?usp=share_link/Police_Department_Incident_Reports__2018_to_Present.csv")
