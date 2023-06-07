@@ -15,9 +15,7 @@ mapa=mapa.dropna()
 st.map(mapa)
 '''
 
-mapa=pd.DataFrame()
-mapa['lat'] = df['Latitude']
-mapa['lon'] = df['Longitude']
+mapa=pd.DataFrame(df['Latitude'], df['Longitude'])
 mapa=mapa.dropna()
 st.map(mapa.astype(int))
 
